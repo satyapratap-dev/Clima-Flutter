@@ -12,7 +12,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
+          onPressed: async () {
             //Get the current location
             Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
             print(position);
