@@ -8,7 +8,7 @@ class Location {
     //Get the current location
     try {
       Position location = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-      NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=${location.longitude}&lon=${location.longitude}&appid=$appId&units=metric');
+      NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=$appId&units=metric');
       return networkHelper.getData();
     } catch (e) {
       throw e;

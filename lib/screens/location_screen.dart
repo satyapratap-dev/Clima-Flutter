@@ -17,9 +17,9 @@ class _LocationScreenState extends State<LocationScreen> {
   void initState() {
     super.initState();
     print(widget.locationData);
-    // temparature = int.parse(widget.locationData['main']['temp']);
-    // condition = int.parse(widget.locationData['weather'][0]['id']);
-    // cityName = widget.locationData['name'];
+    temparature = int.parse(widget.locationData['main']['temp']);
+    condition = int.parse(widget.locationData['weather'][0]['id']);
+    cityName = widget.locationData['name'];
   }
 
   @override
