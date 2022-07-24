@@ -18,6 +18,7 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
+    print(widget.locationData['coord']);
     updateUI(widget.locationData);
   }
 
