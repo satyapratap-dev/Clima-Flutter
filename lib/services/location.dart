@@ -19,7 +19,8 @@ class Location {
 
   Future<void> getData() async {
     var url = Uri.parse('https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22');
-    var future = await get(url);
-    print(future.body);
+    var response = await get(url);
+    print(response.body);
+    if(response.)
   }
 }
