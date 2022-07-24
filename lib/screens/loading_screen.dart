@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return LocationScreen();
+            return LocationScreen(locationData);
           },
         ),
       );
@@ -35,20 +35,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        // child: ElevatedButton(
-        //   onPressed: () {
-        //     //Get the current location
-        //     Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //         builder: (context) {
-        //           return LocationScreen();
-        //         },
-        //       ),
-        //     );
-        //   },
-        //   child: Text('Get Location'),
-        // ),
         child: SpinKitDoubleBounce(
           color: Colors.white,
           size: 50.0,
