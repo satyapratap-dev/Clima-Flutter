@@ -16,11 +16,11 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
-    print(widget.locationData);
     updateUI(widget.locationData);
   }
 
   void updateUI(dynamic weatherData) {
+    print('updateUI ' + widget.locationData);
     double temp = widget.locationData['main']['temp'];
     temparature = temp.toInt();
     condition = widget.locationData['weather'][0]['id'];
