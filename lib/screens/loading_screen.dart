@@ -12,14 +12,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     var locationData = Location().getCurrentLocationData();
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) {
-    //       return LocationScreen();
-    //     },
-    //   ),
-    // );
   }
 
   @override
@@ -34,6 +26,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
         child: ElevatedButton(
           onPressed: () {
             //Get the current location
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LocationScreen();
+                },
+              ),
+            );
           },
           child: Text('Get Location'),
         ),
