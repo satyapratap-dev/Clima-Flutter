@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return LocationScreen(locationData);
+            return LocationScreen(locationData: locationData);
           },
         ),
       );
