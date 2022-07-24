@@ -13,7 +13,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     var locationData = Location().getCurrentLocationData();
-
+    print(locationData);
     Future(() {
       Navigator.push(
         context,
