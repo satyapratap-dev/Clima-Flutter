@@ -10,7 +10,7 @@ class LocationScreen extends StatefulWidget {
 
 class _LocationScreenState extends State<LocationScreen> {
   late int temparature = 0;
-  late int conditio = 0;
+  late int condition = 0;
   late String cityName = '';
 
   @override
