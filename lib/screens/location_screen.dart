@@ -22,7 +22,8 @@ class _LocationScreenState extends State<LocationScreen> {
   }
 
   void updateUI() {
-    print(widget.locationData['coord']);
+    Map<String, dynamic> map = jsonDecode(widget.locationData);
+    print(map);
     var weatherData = widget.locationData;
     temparature = (weatherData.locationData['main']['temp']).cast<int>();
     condition = weatherData.locationData['weather'][0]['id'];
