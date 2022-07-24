@@ -9,7 +9,9 @@ class Location {
     try {
       Position location = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
       NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=$appId&units=metric');
-      return await networkHelper.getData();
+      var locationData = await networkHelper.getData();
+      print(locationData);
+      return locationData;
     } catch (e) {
       throw e;
     }
