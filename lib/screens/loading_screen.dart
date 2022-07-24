@@ -13,6 +13,17 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     var locationData = Location().getCurrentLocationData();
+
+    Future(() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return LocationScreen();
+          },
+        ),
+      );
+    });
   }
 
   @override
