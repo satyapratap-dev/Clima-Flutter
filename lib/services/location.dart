@@ -1,26 +1,21 @@
-import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:http/http.dart';
+import 'networking.dart';
 
 class Location {
   late double latitude;
   late double longitude;
+  final String appId = "6e93b3d15872f914c6929fed9ea71e9a";
 
-  Future<Position> getCurrentLocation() async {
+  Future getCurrentLocationData() async {
     //Get the current location
     try {
       Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-      print(position);
-      return position;
+      latitude = position.latitude;
+      longitude = position.longitude;
+      NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$appId');
+      return networkHelper.getData();
     } catch (e) {
       throw e;
     }
-  }
-
-  Future<void> getData() async {
-    var url = Uri.parse('https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22');
-    var response = await get(url);
-    print(response.body);
-    if(response.)
   }
 }
