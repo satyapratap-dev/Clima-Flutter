@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 
@@ -20,7 +22,7 @@ class _LocationScreenState extends State<LocationScreen> {
   }
 
   void updateUI(dynamic weatherData) {
-    print('updateUI ' + weatherData.locationData['main']['temp']);
+    print(jsonDecode(weatherData));
     // double temp = weatherData.locationData['main']['temp'];
     // temparature = temp.toInt();
     // condition = weatherData.locationData['weather'][0]['id'];
