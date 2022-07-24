@@ -16,9 +16,10 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
-    temparature = int.parse(widget.locationData['main']['temp']);
-    condition = int.parse(widget.locationData['weather'][0]['id']);
-    cityName = widget.locationData['name'];
+    print(widget.locationData);
+    // temparature = int.parse(widget.locationData['main']['temp']);
+    // condition = int.parse(widget.locationData['weather'][0]['id']);
+    // cityName = widget.locationData['name'];
   }
 
   @override
@@ -62,7 +63,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      temparature.toString(),
+                      '$temparature°C',
                       style: kTempTextStyle,
                     ),
                     Text(
