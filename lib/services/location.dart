@@ -4,7 +4,7 @@ import 'networking.dart';
 class Location {
   final String appId = "6e93b3d15872f914c6929fed9ea71e9a";
 
-  Future getCurrentLocationData() async {
+  dynamic getCurrentLocationData() async {
     //Get the current location
     try {
       Position location = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
