@@ -21,8 +21,7 @@ class _LocationScreenState extends State<LocationScreen> {
   }
 
   void updateUI() {
-    double temp = widget.locationData['main']['temp'];
-    temparature = temp.toInt();
+    temparature = (widget.locationData['main']['temp']).cast<int>();
     condition = widget.locationData['weather'][0]['id'];
     cityName = widget.locationData['name'];
   }
