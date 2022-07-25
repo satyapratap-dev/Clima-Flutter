@@ -46,7 +46,7 @@ class _CityScreenState extends State<CityScreen> {
               ),
               TextButton(
                 onPressed: () {
-                  print(cityName);
+                  print('getwaeather $cityName');
                   Navigator.pop(context, cityName);
                 },
                 child: Text(
