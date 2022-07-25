@@ -72,10 +72,11 @@ class _LocationScreenState extends State<LocationScreen> {
                             return CityScreen();
                           },
                         ),
-                        if(cityName != null){
-                          print(cityName);
-                        }
                       );
+
+                      if (cityName != null) {
+                        print(cityName);
+                      }
                     },
                     child: Icon(
                       Icons.location_city,

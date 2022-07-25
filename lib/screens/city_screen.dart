@@ -25,8 +25,8 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: TextButton(
-                  onPressed: (value) {
-                    cityName = value;
+                  onPressed: () {
+                    Navigator.pop(context);
                   },
                   child: Icon(
                     Icons.arrow_back_ios,
@@ -41,6 +41,7 @@ class _CityScreenState extends State<CityScreen> {
                     color: Colors.black,
                   ),
                   decoration: kLocationDecoration,
+                  onChanged: (val) => cityName = val,
                 ),
               ),
               TextButton(
