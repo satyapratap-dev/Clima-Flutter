@@ -83,17 +83,19 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 15.0),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      '$temparature°C',
-                      style: kTempTextStyle,
-                    ),
-                    Text(
-                      '$conditionImage',
-                      style: kConditionTextStyle,
-                    ),
-                  ],
+                child: Expanded(
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        '$temparature°C',
+                        style: kTempTextStyle,
+                      ),
+                      Text(
+                        '$conditionImage',
+                        style: kConditionTextStyle,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
