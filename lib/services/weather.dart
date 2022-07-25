@@ -2,7 +2,7 @@ import 'package:clima/services/networking.dart';
 import 'package:geolocator/geolocator.dart';
 
 const String appId = "6e93b3d15872f914c6929fed9ea71e9a";
-const String weatherURI = "https://api.openweathermap.org/data/2.5/weather?";
+const String weatherURI = "https://api.openweathermap.org/data/2.5/weather";
 
 class WeatherModel {
   Future<dynamic> getWeatherDatabyCityName(String cityName) async {
