@@ -5,8 +5,8 @@ const String appId = "6e93b3d15872f914c6929fed9ea71e9a";
 const String weatherURI = "https://api.openweathermap.org/data/2.5/weather";
 
 class WeatherModel {
-  Future<dynamic> getWeatherDatabyCityName(dynamic cityName) async {
-    NetworkHelper networkHelper = NetworkHelper('$weatherURI?lat=q=$cityName&appid=$appId&units=metric');
+  Future<dynamic> getWeatherDatabyCityName(String cityName) async {
+    NetworkHelper networkHelper = NetworkHelper('$weatherURI?q=$cityName&appid=$appId&units=metric');
     var locationData = await networkHelper.getData();
     return locationData;
   }
