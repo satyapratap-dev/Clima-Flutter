@@ -75,7 +75,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       );
 
                       if (cityName != null) {
-                        var weatherData = await weatherModel.getWeatherDatabyCityName(cityName);
+                        var weatherData = await weatherModel.getWeatherDatabyCityName(cityName.toString());
                         updateUI(weatherData);
                       }
                     },
